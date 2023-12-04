@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Options - Where Am I</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="options-container">
+  <h1>Options</h1>
+  
+  <label for="volume-control">Volume</label>
+  <input type="range" id="volume-control" name="volume" min="0" max="100">
+  
+  <h2>Accessibility Mode</h2>
+  <form id="accessibility-options">
+    <input type="checkbox" id="deaf-mode" name="accessibility" value="deaf">
+    <label for="deaf-mode">Deaf / Hard of Hearing</label><br>
+    
+    <input type="checkbox" id="blind-mode" name="accessibility" value="blind">
+    <label for="blind-mode">Blind / Visibility Assist</label><br>
+    
+    <input type="checkbox" id="standard-mode" name="accessibility" value="standard" checked>
+    <label for="standard-mode">Standard Mode</label>
+  </form>
+  
+  <button id="save-options">SAVE</button>
+  
+  <a href="index.html" id="back-to-main" class="quit-style">back</a>
+</div>
+
+<script src="options-script.js"></script>
+</body>
+</html>
