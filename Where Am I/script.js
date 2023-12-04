@@ -14,6 +14,11 @@ document.getElementById('quit').addEventListener('click', function() {
     document.getElementById('level-selection').style.display = 'block';
   });
   
+  document.getElementById('back-to-main').addEventListener('click', function() {
+    document.getElementById('level-selection').style.display = 'none';
+    // If you have a main game screen div, you might want to display it here
+});
+
   // Add event listeners for level buttons
   document.getElementById('level1').addEventListener('click', function() {
     // Start Level 1
