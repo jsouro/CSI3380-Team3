@@ -17,7 +17,17 @@ body, html {
   h1 {
     margin-bottom: 20px;
   }
-  
+
+  /* Remove underline from the anchor tag */
+#options-link, #options-link:visited, #options-link:hover, #options-link:active {
+  text-decoration: none;
+}
+
+/* If you want to remove the underline when hovering as well */
+#options-link:hover {
+  text-decoration: none;
+}
+
   button {
     display: block;
     margin: 10px auto;
@@ -25,7 +35,13 @@ body, html {
     font-size: 16px;
     cursor: pointer;
   }
-  
+  .quit-style {
+    color: yellow;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+  }
   #quit {
     color: yellow;
     position: fixed;
@@ -33,6 +49,8 @@ body, html {
     left: 20px;
     text-decoration: none;
   }
+
+  
 
   #back-to-main {
     position: fixed;
