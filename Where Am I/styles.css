@@ -33,7 +33,15 @@ body, html {
     left: 20px;
     text-decoration: none;
   }
-  
+
+  #back-to-main {
+    color: yellow;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+  }
+
   .modal {
     display: none;
     position: fixed;
