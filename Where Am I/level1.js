@@ -117,27 +117,17 @@ function draw() {
 function drawLightingEffect() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.85)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+  const lightRadius = 50;
 
-  ctx.globalCompositeOperation = 'destination-out';
-  const lightRadius = 100;
-  const radialGradient = ctx.createRadialGradient(
-    penguin.x + penguin.width / 2,
-    penguin.y + penguin.height / 2,
-    0,
-    penguin.x + penguin.width / 2,
-    penguin.y + penguin.height / 2,
-    lightRadius
-  );
-
-  radialGradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-  radialGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-
-  ctx.fillStyle = radialGradient;
-  ctx.beginPath();
-  ctx.arc(penguin.x + penguin.width / 2, penguin.y + penguin.height / 2, lightRadius, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.globalCompositeOperation = 'source-over';
+  const toRightEdge = (canvas.width - 40) - penguin.x
+  const toLeftEdge = penguin.x
+  const toBottomEdge = canvas.height - penguin.y
+  const toTopEdge = penguin.y
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+  ctx.fillRect(penguin.x+40 + lightRadius, 0, toRightEdge, canvas.height)
+  ctx.fillRect(penguin.x - lightRadius - toLeftEdge, 0, toLeftEdge, canvas.height)
+  ctx.fillRect(0, penguin.y - toTopEdge - lightRadius, canvas.width, toTopEdge)
+  ctx.fillRect(0, penguin.y + 40 + lightRadius, canvas.width, toBottomEdge)
 }
 
 function startGame() {
