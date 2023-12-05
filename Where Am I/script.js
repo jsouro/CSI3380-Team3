@@ -21,8 +21,8 @@ document.getElementById('quit').addEventListener('click', function() {
 
   // Add event listeners for level buttons
   document.getElementById('level1').addEventListener('click', function() {
-    // Start Level 1
-  });
+    window.location.href = 'level1.html';
+});
   
   document.getElementById('level2').addEventListener('click', function() {
     // Start Level 2
