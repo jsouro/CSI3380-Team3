@@ -9,7 +9,10 @@ body, html {
     justify-content: center;
     align-items: center;
   }
-  
+canvas {
+    background-color: #333;
+    display: block;
+}
   #game-container {
     text-align: center;
   }
